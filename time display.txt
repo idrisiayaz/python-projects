@@ -1,0 +1,17 @@
+from tkinter import *
+from time import strftime
+from tkinter.font import BOLD
+
+window = Tk()
+window.title("Digital Clock")
+window.configure(background="black")
+def time():
+    tp = strftime("%H:%M:%S %p")
+    lbl.configure(text= tp)
+    lbl.after(1000, time)
+
+lbl = Label(window,font=("times 20",160,BOLD), bg="blue",fg="grey")
+lbl.pack(anchor=CENTER,fill= BOTH,expand=2)
+
+time()
+window.mainloop()

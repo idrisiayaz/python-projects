@@ -1,0 +1,9 @@
+translate = (('aam','mango'),('paani','water'),('pedh','tree'),('kaleen','matt'))
+
+def translateword(word):
+    for aam,paani in translate:
+       word = word.replace(aam,paani)
+    return word
+word = input("enter word to translate: ")
+print(translateword(word))
+

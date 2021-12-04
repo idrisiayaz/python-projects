@@ -1,0 +1,32 @@
+import random
+import time
+
+guess = 0
+tries = 0
+
+number = random.randint(1,20)
+
+name = input("heyya,May i know your Name? ")
+print("hello "+name+".")
+question = input ("Are you ready to Guess? (Y/N) ")
+ 
+if question.lower() == 'y' :
+    time.sleep(1)
+    print("Ummm.......")
+    time.sleep(2)
+    print("I'm thinking of a number between 1 to 20")
+    time.sleep(2)
+if question.lower() == 'n' :
+    print("we'll play next time :)")
+
+while not (guess == number):
+    guess = int(input("Whats your guess? "))
+    tries = tries + 1
+    if guess == number :
+        print("Brilliant!")
+        print("Congrats,your guess was correct.Indeed the number was {}".format(number))
+        print("It has taken you {} tries".format(tries))
+    elif guess < number :
+        print("No! Guess Higher")
+    elif guess > number :
+        print("No! Guess Lower")

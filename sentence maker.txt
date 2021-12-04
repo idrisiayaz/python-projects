@@ -1,0 +1,17 @@
+def question_finder(sentence):
+    parameters = ("when" , "why" ,"how" , "who" , "what")
+    capital = sentence.capitalize()
+    if sentence.startswith(parameters):
+        return  "{}?".format(capital)
+    else:
+        return "{}.".format(capital)
+   
+
+data = []
+while True :
+    yourdata = input("Type a sentence: ")
+    if yourdata == "stop":
+        break
+    else:
+        data.append(question_finder(yourdata))
+print("".join(data))

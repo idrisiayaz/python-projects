@@ -1,0 +1,33 @@
+while True:
+    print("1.Addition(+)\n2.Subtraction(-)\n3.Multiplication(x)\n4.Division(/)\n")
+    select = int(input("Select any function: "))
+    print()
+
+    if select>=1 and select<=4:
+        num1 = float(input("enter first number: "))
+        num2 = float(input("enter second number: "))
+        print()
+    if select == 1:
+        add = num1 + num2
+        print("Additon Result:",add)
+    elif select == 2:
+        sub = num1 - num2
+        print("Subtraction Result:",sub)
+    elif select == 3:
+        mul = num1 * num2
+        print("Multiplication Result: ",mul)
+    elif select == 4:
+        div = num1 / num2
+        print("Division Result: ")
+    else:
+        print("Invalid syntax")
+    print()
+    startstop = int(input("Press 1 to start again/Press 2 to stop here: "))
+    print()
+    if startstop == 1:
+        continue
+    elif startstop == 2:
+        break
+    break
+print()
+
